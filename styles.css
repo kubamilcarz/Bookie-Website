@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'New York', -apple-system-ui-serif, ui-serif, 'Roboto Serif', serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cta-button {
+    background-color: #F19538;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.hero-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-image img {
+    max-width: 300px;
+    margin-top: 20px;
+}
+
+.promo {
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.features {
+    background-color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.feature-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.feature {
+    flex: 1;
+    max-width: 300px;
+    background: #eee;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.bookie-plus {
+    padding: 2rem;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.bookie-plus ul {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+}
+
+.bookie-plus li {
+    margin: 0.5rem 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    font-weight: bold;
+    margin-top: 1rem;
+    display: inline-block;
+}
