@@ -331,10 +331,6 @@ footer a {
         display: none;
     }
 
-    .hero .hero-image {
-        margin-bottom: -150px;
-    }
-
     .hero .hero-text h2 {
         font-size: 22px;
     }
@@ -345,6 +341,12 @@ footer a {
 
     .downloads {
         flex-direction: column;
+    }
+
+    footer .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
