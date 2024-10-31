@@ -10,28 +10,93 @@ body {
     background-color: #f4f4f4;
 }
 
-header {
-    background: #333;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-}
-
-header h1 {
-    margin-bottom: 10px;
-}
-
-.nav {
+.container {
     display: flex;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+#header {
+    position: sticky;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #ffffffcc;
+    backdrop-filter: blur(50px);
+    z-index: 1000;
+}
+
+#header .container {
+    height: 80px;
+    align-items: center;
     justify-content: space-between;
 }
 
-.cta-button {
-    background-color: #F19538;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+#header a.logo {
+    display: block;
     text-decoration: none;
+    color: #333;
+}
+
+#header a.logo div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+#header a.logo img {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    border-radius: calc(60px*2/9);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 6px;
+}
+
+#header a.logo h1 {
+    display: block;
+    margin: 0;
+    font-size: 24px;
+}
+
+#header .links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+#header .links .link {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    transition: all 250ms ease-in-out;
+}
+
+#header .links .link.faq {
+    margin-right: 10px;
+}
+
+#header .links .link:hover {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 9px;
+}
+
+.cta-button {
+    background-color: #FEDBB3;
+    color: #FF8F09;
+    padding: 10px 20px;
+    border-radius: 9px;
+    text-decoration: none;
+    transition: all 250ms ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #fbd6ac;
+    box-shadow: rgba(0, 0, 0, 0.07) 0 2px 4px;
 }
 
 .hero {
@@ -41,6 +106,21 @@ header h1 {
     padding: 2rem;
     background-color: #fff;
     text-align: center;
+    background: linear-gradient(180deg, #FFEBB3 0%, #FCDDBF 100%);
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-text {
+    width: 100%;
+    padding: 2rem;
+    background: #ffffffcc;
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
 }
 
 .hero-text h2 {
@@ -49,13 +129,18 @@ header h1 {
 }
 
 .hero-text p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+    font-size: 18px;
+    max-width: 600px;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.hero-image {
+    margin-bottom: -130px;
 }
 
 .hero-image img {
-    max-width: 300px;
-    margin-top: 20px;
+    max-width: 700px;
 }
 
 .promo {
@@ -66,8 +151,20 @@ header h1 {
 
 .features {
     background-color: #fff;
-    padding: 2rem;
+    padding: 5rem 0;
     text-align: center;
+}
+
+.features .container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.features .container h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    padding-bottom: 2.5rem;
 }
 
 .feature-grid {
@@ -80,9 +177,55 @@ header h1 {
 .feature {
     flex: 1;
     max-width: 300px;
-    background: #eee;
-    padding: 1.5rem;
-    border-radius: 8px;
+    background-color: #f5f5f5cc;
+    backdrop-filter: blur(50px);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 3px 6px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.feature .img-container {
+    width: 100%;
+    height: 170px;
+    background-size: cover;
+    background-position: top;
+}
+
+.feature .img-container.organize {
+    background-image: url("../img/organize.png");
+}
+
+.feature .img-container.discover {
+    background-image: url("../img/discover.png");
+}
+
+.feature .img-container.goals {
+    background-image: url("../img/goals.png");
+}
+
+.feature .img-container.insights {
+    background-image: url("../img/insights.png");
+}
+
+.feature h4 {
+    font-size: 18px;
+    color: #333;
+}
+
+.feature p {
+    font-size: 15px;
+    color: #333;
+}
+
+.feature h4, .feature p {
+    margin: 0;
+    padding: 0;
+    display: block;
 }
 
 .bookie-plus {
