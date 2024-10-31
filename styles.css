@@ -171,11 +171,12 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .feature {
     flex: 1;
+    min-width: 220px;
     max-width: 300px;
     background-color: #f5f5f5cc;
     backdrop-filter: blur(50px);
@@ -256,4 +257,36 @@ footer a {
     font-weight: bold;
     margin-top: 1rem;
     display: inline-block;
+}
+
+@media (max-width: 540px) {
+
+    #header .link {
+        display: none;
+    }
+
+    .hero .hero-image {
+        margin-bottom: -150px;
+    }
+
+    .hero .hero-text h2 {
+        font-size: 4vw;
+    }
+
+    .hero .hero-text p {
+        font-size: 2.2vw;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .hero .hero-image {
+        width: 100%;
+    }
+
+    .hero .hero-image img {
+        width: 100%;
+    }
+
 }
