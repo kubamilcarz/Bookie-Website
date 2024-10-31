@@ -29,6 +29,22 @@ body {
     z-index: 1000;
 }
 
+.downloads {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.downloads a {
+    transition: 250ms all ease-in-out;
+}
+
+.downloads a:hover {
+    transform: scale(1.02);
+}
+
 #header .container {
     height: 80px;
     align-items: center;
@@ -149,25 +165,25 @@ body {
     font-weight: bold;
 }
 
-.features {
+.features, .testimonials {
     background-color: #fff;
     padding: 5rem 0;
     text-align: center;
 }
 
-.features .container {
+.features .container, .testimonials .container {
     flex-direction: column;
     align-items: center;
 }
 
-.features .container h3 {
+.features .container h3, .testimonials .container h3 {
     margin: 0;
     font-size: 24px;
     color: #333;
     padding-bottom: 2.5rem;
 }
 
-.feature-grid {
+.feature-grid, .testimonials-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -216,11 +232,13 @@ body {
 .feature h4 {
     font-size: 18px;
     color: #333;
+    min-height: 50px;
 }
 
 .feature p {
     font-size: 15px;
     color: #333;
+    font-family: 'SF Pro', sans-serif;
 }
 
 .feature h4, .feature p {
@@ -245,18 +263,66 @@ body {
     margin: 0.5rem 0;
 }
 
+.testimonials .header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.testimonials .author {
+    display: block;
+    width: 100%;
+    text-align: right;
+}
+
+.testimonials .testimonials-grid .feature {
+    gap: 0.5rem !important;
+}
+
+.testimonials .header .rating {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+
+.testimonials .feature .header h4 {
+    margin: 0;
+    padding-bottom: 0;
+}
+
+.testimonials .header .rating img {
+    display: block;
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) saturate(100%) invert(61%) sepia(93%) saturate(747%) hue-rotate(1deg) brightness(104%) contrast(104%);
+}
+
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #efefef;
+    color: #333;
     padding: 1rem;
     text-align: center;
 }
 
+footer .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'SF Pro', sans-serif;
+    font-size: 14px;
+}
+
+footer .links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 footer a {
-    color: white;
-    font-weight: bold;
-    margin-top: 1rem;
-    display: inline-block;
+    color: #333;
+    display: block;
+    text-decoration: none;
 }
 
 @media (max-width: 540px) {
@@ -270,11 +336,15 @@ footer a {
     }
 
     .hero .hero-text h2 {
-        font-size: 4vw;
+        font-size: 22px;
     }
 
     .hero .hero-text p {
-        font-size: 2.2vw;
+        font-size: 16px;
+    }
+
+    .downloads {
+        flex-direction: column;
     }
 }
 
