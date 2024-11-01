@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bookie - Reading Tracker</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet" />
   <link rel="icon" type="image/x-icon" href="img/bookie.ico" />
   <meta property="og:title" content="Bookie - Reading Tracker" />
   <meta property="og:description" content="Track your reading, conquer your TBR, and hit your reading goals with Bookie!" />
@@ -143,6 +144,62 @@
     </div>
 </section>
 
+<section id="faq">
+    <div class="container">
+        <h3>Frequently asked questions</h3>
+        <div class="faq-section">
+            <div class="faq-item">
+                <button class="faq-question">How do I add books to my TBR (To Be Read) list?</button>
+                <div class="faq-answer">
+                    <p>Adding books to your TBR is easy! Just search for a book title, tap on it, and select “Add to TBR.” You’ll have all your must-reads saved in one place.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Can I track my reading progress on multiple books at the same time?</button>
+                <div class="faq-answer">
+                    <p>Absolutely! Bookie lets you keep track of multiple books simultaneously, so you can log pages and progress for all your current reads.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Is there a way to discover new book recommendations on Bookie?</button>
+                <div class="faq-answer">
+                    <p>Yes! Our “Discover” section is updated with trending books, popular titles, and personalized recommendations to help you find your next great read.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">What is Bookie+ and what extra features does it offer?</button>
+                <div class="faq-answer">
+                    <p>Yes, our money-back guarantee ensures that you can request a refund within 30 days.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Where is my data stored, and who has access to it?</button>
+                <div class="faq-answer">
+                    <p>Your data is stored securely on your iCloud account, so only you can access it. Bookie doesn’t store your personal reading data on our servers, and we cannot access your specific information. This setup ensures that your data is safe and fully in your control.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Can I delete my data or export it if I decide to stop using Bookie?</button>
+                <div class="faq-answer">
+                    <p>Yes, you can delete your data at any time by removing it from your iCloud account, which will erase all Bookie information from your devices. We also provide an option to export your reading data, so you have a backup if you decide to stop using Bookie.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">How can I contact Bookie about data and privacy concerns?</button>
+                <div class="faq-answer">
+                    <p>If you have any questions or concerns about data privacy, you can reach out to our support team via the app or email us at support@kubamilcarz.com. We’re here to help!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <footer id="download">
     <div class="container">
         <p>&copy; 2024 Kuba Milcarz. All Rights Reserved.</p>
@@ -154,5 +211,22 @@
         </div>
     </div>
 </footer>
+<script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+button.addEventListener('click', () => {
+  const faqAnswer = button.nextElementSibling;
+
+  // Toggle the active class for styling
+  button.classList.toggle('active');
+
+  // Toggle the display of the answer
+  if (faqAnswer.style.maxHeight) {
+    faqAnswer.style.maxHeight = null;
+  } else {
+    faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px';
+  }
+});
+});
+</script>
 </body>
 </html>

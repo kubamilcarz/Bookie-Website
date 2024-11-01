@@ -66,10 +66,10 @@ body {
 
 #header a.logo img {
     display: flex;
-    width: 60px;
-    height: 60px;
-    border-radius: calc(60px*2/9);
-    box-shadow: rgba(0, 0, 0, 0.1) 0 0 6px;
+    width: 44px;
+    height: 44px;
+    border-radius: calc(44px*2/9);
+    box-shadow: rgba(0, 0, 0, 0.07) 0 0 3px;
 }
 
 #header a.logo h1 {
@@ -296,6 +296,88 @@ body {
     width: 16px;
     height: 16px;
     filter: brightness(0) saturate(100%) invert(61%) sepia(93%) saturate(747%) hue-rotate(1deg) brightness(104%) contrast(104%);
+}
+
+#faq .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 1rem;
+    text-align: center;
+}
+
+#faq h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    padding-bottom: 2.5rem;
+}
+
+.faq-section {
+    width: 100%;
+    background-color: white;
+    border-radius: 24px;
+    box-sizing: border-box;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.faq-item {
+    margin-bottom: 10px
+}
+
+.faq-item:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #ecebec;
+}
+
+.faq-item:last-child::after {
+    display: none
+}
+
+.faq-question {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    font-family: 'SF Pro', sans-serif;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question:after {
+    font-family: 'Font Awesome\ 5 Free';
+    content: '\f067';
+    font-size: 20px;
+    transition: transform 210ms ease-in-out;
+}
+
+.faq-question.active:after {
+    transform: rotate(45deg)
+}
+        
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    padding: 0 15px;
+    border-radius: 12px;
+    transition: max-height 210ms ease-in-out;
+}
+.faq-answer p {
+    text-align: left;
+    font-family: 'SF Pro', sans-serif;
+    padding: 15px 0;
+    margin: 0;
 }
 
 footer {
