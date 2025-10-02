@@ -1,7 +1,17 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 import { allBlogPosts } from "contentlayer/generated";
 import { Container, Section } from "@/components/layout/container";
+
+// Static metadata (no searchParams → export-safe)
+export const metadata = {
+  title: "Bookie Blog",
+  description:
+    "Product updates, tips, and reading rituals from the Bookie team.",
+};
 
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString(undefined, {
@@ -18,37 +28,23 @@ function readingTimeFor(post: { readingTime?: number; body?: { raw?: string } })
   return Math.max(1, Math.ceil(words / 200));
 }
 
-export async function generateMetadata({
-  searchParams,
-}: {
-  searchParams: Promise<{ tag?: string }>;
-}) {
-  const { tag } = await searchParams;
-  const title = tag ? `Bookie Blog · ${tag}` : "Bookie Blog";
-  const description = tag
-    ? `Posts tagged “${tag}” — product updates, tips, and reading rituals from the Bookie team.`
-    : "Product updates, tips, and reading rituals from the Bookie team.";
-  return { title, description };
-}
+export default function BlogIndexPage() {
+  const sp = useSearchParams();
+  const tagParam = sp.get("tag") || undefined;
+  const activeTag = tagParam ? String(tagParam) : undefined;
 
-export default async function BlogIndexPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ tag?: string | string[] }>;
-}) {
-  const { tag } = await searchParams;
-  const activeTag = Array.isArray(tag) ? tag[0] : tag;
-
+  // Precompute base posts statically; filter on client with ?tag=
   const posts = allBlogPosts
     .filter((p) => !p.draft)
-    .filter((p) =>
-      activeTag
-        ? (p.tags ?? []).some(
-            (t) => t.toLowerCase() === activeTag.toLowerCase()
-          )
-        : true
-    )
     .sort((a, b) => +new Date(b.publishedAt) - +new Date(a.publishedAt));
+
+  const filtered = activeTag
+    ? posts.filter((p) =>
+        (p.tags ?? []).some(
+          (t) => t.toLowerCase() === activeTag.toLowerCase()
+        )
+      )
+    : posts;
 
   return (
     <main>
@@ -78,7 +74,7 @@ export default async function BlogIndexPage({
           </div>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {posts.map((post) => (
+            {filtered.map((post) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
@@ -134,7 +130,7 @@ export default async function BlogIndexPage({
             ))}
           </div>
 
-          {posts.length === 0 ? (
+          {filtered.length === 0 ? (
             <div className="mx-auto mt-16 max-w-3xl text-center text-sm text-neutral-600">
               No posts found{activeTag ? ` for “${activeTag}”` : ""}.{" "}
               <Link
