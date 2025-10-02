@@ -1,7 +1,10 @@
-import { MetadataRoute } from "next";
-export default function robots(): MetadataRoute.Robots {
+export const dynamic = 'force-static';
+
+export default function robots() {
+  const base = 'https://getbookie.app';
   return {
-    rules: [{ userAgent: "*", allow: "/" }],
-    sitemap: "https://bookie.app/sitemap.xml",
+    rules: [{ userAgent: '*', allow: '/' }],
+    sitemap: `${base}/sitemap.xml`,
+    host: base,
   };
 }
