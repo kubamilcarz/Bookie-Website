@@ -3,14 +3,21 @@ import { Container, Section } from "@/components/layout/container";
 import { allBlogPosts } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 
-export default async function BlogPostPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
-  const post = allBlogPosts.find((p) => p.slug === slug && !p.draft);
+type Props = { params: { slug: string } };
+
+// Tell Next these routes are fully static
+export const dynamic = "force-static";
+export const dynamicParams = false; // don't allow unknown slugs at runtime
+
+export async function generateStaticParams() {
+  // slugAsParams is the usual field from Contentlayer (e.g. "my-post")
+  return allBlogPosts.map((p) => ({ slug: p.slug }));
+}
+
+export default function BlogPostPage({ params }: Props) {
+  const post = allBlogPosts.find((p) => p.slug === params.slug);
   if (!post) return notFound();
+
 
   return (
     <main>
@@ -39,12 +46,6 @@ export default async function BlogPostPage({
       [&>h2]:mt-10 [&>h2]:text-xl [&>h2]:font-bold [&>h2]:text-neutral-900
       [&>h3]:mt-8 [&>h3]:text-lg [&>h3]:font-bold [&>h3]:text-neutral-900
       [&>h4]:mt-6 [&>h4]:text-base [&>h4]:font-bold [&>h4]:text-neutral-900
-
-      dark:[&>p]:text-neutral-300
-      dark:[&>h1]:text-neutral-50
-      dark:[&>h2]:text-neutral-50
-      dark:[&>h3]:text-neutral-50
-      dark:[&>h4]:text-neutral-50
     "
   />
 </div>
