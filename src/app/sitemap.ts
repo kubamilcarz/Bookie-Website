@@ -1,22 +1,13 @@
-import { MetadataRoute } from "next";
+export const dynamic = 'force-static';
+export default function sitemap() {
+  const base = 'https://getbookie.app';
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://bookie.app";
-  const staticRoutes = ["", "/about", "/premium", "/blog", "/support"].map(
-    (p) => ({
-      url: `${base}${p || "/"}`,
-      changefreq: "weekly" as const,
-      priority: 0.8,
-    })
-  );
-
-//   const blog = allBlogPosts.map((p) => ({
-//     url: `${base}/blog/${p.slug}`,
-//     lastModified: p.date,
-//   }));
-//   const support = allSupportArticles.map((a) => ({
-//     url: `${base}/support/${a.slug}`,
-//   }));
-
-  return [...staticRoutes, /*...blog, ...support*/];
+  return [
+    { url: `${base}/`,               lastModified: new Date() },
+    { url: `${base}/features/`,      lastModified: new Date() },
+    { url: `${base}/blog/`,          lastModified: new Date() },
+    { url: `${base}/about/`,         lastModified: new Date() },
+    { url: `${base}/roadmap/`,       lastModified: new Date() },
+    { url: `${base}/support/`,       lastModified: new Date() },
+  ];
 }

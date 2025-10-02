@@ -2,6 +2,7 @@ import { withContentlayer } from 'next-contentlayer'
 
 const nextConfig = {
 images: { domains: [] },
+
 async redirects() {
     return [
       {
