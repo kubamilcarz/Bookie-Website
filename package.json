@@ -1,5 +1,6 @@
 {
   "name": "bookie-site",
+  "homepage": "https://getbookie.app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,7 +8,8 @@
     "build": "contentlayer build && next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "content": "contentlayer"
+    "content": "contentlayer build",
+    "deploy": "npm run build && touch ./out/.nojekyll && touch ./out/CNAME && echo 'https://getbookie.app' > ./out/CNAME && gh-pages -d out -t true"
   },
   "dependencies": {
     "@fontsource/noto-sans": "^5.2.10",

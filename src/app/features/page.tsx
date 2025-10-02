@@ -189,7 +189,7 @@ export default function FeaturesPage() {
           </section>
 
           {/* Bookie+ */}
-          <section className="mx-auto mt-12 max-w-5xl">
+          <section id="bookie-plus" className="mx-auto mt-12 max-w-5xl">
             <div className="mb-4">
               <h2 className="text-2xl font-semibold tracking-tight text-neutral-900">
                 Bookie+
