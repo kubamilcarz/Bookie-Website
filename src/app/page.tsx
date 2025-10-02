@@ -303,7 +303,7 @@ const reviews = [
     },
     {
         name: "Max M.",
-        text: "Best reading app I've used. Simple, beautiful, and actually helps me read more.",
+        text: "Best reading app I&apos;ve used. Simple, beautiful, and actually helps me read more.",
     },
     {
         name: "Anna R.",
