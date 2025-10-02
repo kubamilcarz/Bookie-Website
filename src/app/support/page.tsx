@@ -18,7 +18,7 @@ export default function SupportPage() {
                 Support
               </h1>
               <p className="mt-4 text-neutral-700">
-                We're working on this page right now — soon you'll find guides,
+                We&apos;re working on this page right now — soon you&apos;ll find guides,
                 FAQs, and ways to get help here.
               </p>
               <div className="mt-8 mx-auto max-w-sm">
