@@ -4,15 +4,16 @@ import Image from "next/image";
 const nav = {
   Product: [
     // { label: "Pricing", href: "/premium" },
-    { label: "Support", href: "/support" },
+    // { label: "Support", href: "/support" },
+    { label: "Features", href: "/features" },
     { label: "Roadmap", href: "/roadmap" },
-    { label: "Release Notes", href: "/blog" },
+    { label: "Release Notes", href: "/blog?tag=release" },
   ],
   Company: [
     { label: "About", href: "/about" },
     { label: "Blog", href: "/blog" },
-    { label: "Press Kit", href: "/press-kit" },
-    { label: "Public Beta", href: "/beta" },
+    { label: "Press Kit", href: "https://doors-report-rb8.craft.me/XbWZ0UVfbSZODj" },
+    { label: "Public Beta", href: "https://testflight.apple.com/join/n2vMsGX9" },
   ],
   Follow: [
     { label: "Threads", href: "https://www.threads.com/@bookie_tracker" },

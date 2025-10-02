@@ -91,7 +91,7 @@ function Hero() {
               className="mt-6 flex flex-wrap items-center gap-3"
             >
               <Link
-                href="https://apps.apple.com/app/idXXXXXXXX"
+                href="https://apps.apple.com/us/app/book-tracker-bookie/id6443825869"
                 className="group inline-flex items-center justify-center rounded-full bg-[color:var(--foreground)] px-5 py-3 text-sm font-medium text-white transition hover:bg-[color:var(--foreground)]/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--bookie-orange)]/50"
               >
                 <span>Download on the App Store</span>
@@ -284,40 +284,40 @@ function useInViewOnce<T extends HTMLElement>(opts?: IntersectionObserverInit) {
 }
 
 function SocialProof() {
-  const reviews = [
+const reviews = [
     {
-      name: "Anna4",
-      text: "Love how clean and motivating the design is. Makes me want to read more!",
+        name: "John P.",
+        text: "Finally found an app that makes reading tracking feel natural, not like homework.",
     },
     {
-      name: "James2",
-      text: "Finally an app that helps me track books without being overwhelming.",
+        name: "Paul R.",
+        text: "The quote scanner is brilliant. I can capture passages from physical books instantly.",
     },
     {
-      name: "Sophie3",
-      text: "The quote scanner is a game changer for my studies and personal notes.",
+        name: "Alex M.",
+        text: "Clean interface and smart goals keep me motivated without being pushy.",
     },
     {
-      name: "James",
-      text: "Finally an app that helps me track books without being overwhelming.",
+        name: "David L.",
+        text: "Love how it syncs across devices. My reading progress is always up to date.",
     },
     {
-      name: "Anna",
-      text: "Love how clean and motivating the design is. Makes me want to read more!",
+        name: "Max M.",
+        text: "Best reading app I've used. Simple, beautiful, and actually helps me read more.",
     },
     {
-      name: "James8",
-      text: "Finally an app that helps me track books without being overwhelming.",
+        name: "Anna R.",
+        text: "The gentle reminders and streak tracking work perfectly for building habits.",
     },
     {
-      name: "Sophie4",
-      text: "The quote scanner is a game changer for my studies and personal notes.",
+        name: "Sophia S.",
+        text: "Importing from Goodreads was seamless. Switched over in minutes.",
     },
     {
-      name: "James6",
-      text: "Finally an app that helps me track books without being overwhelming.",
+        name: "Tom M.",
+        text: "No ads, no tracking, just pure focus on reading. Exactly what I wanted.",
     },
-  ];
+];
 
   return (
     <Section>
@@ -415,7 +415,7 @@ function BookiePlusSection() {
     },
     {
       title: "Dynamic lists",
-      desc: "Auto-updating lists like ‘New this month’.",
+      desc: "Auto-updating lists like ‘TBR’.",
       icon: (
         <svg
           viewBox="0 0 24 24"
@@ -486,7 +486,7 @@ function BookiePlusSection() {
                       {f.icon}
                     </div>
                     <div>
-                      <h3 className="text-base font-semibold text-neutral-900">
+                      <h3 className="text-lg font-medium text-neutral-900">
                         {f.title}
                       </h3>
                       <p className="mt-1 text-sm text-neutral-700">{f.desc}</p>
@@ -593,7 +593,7 @@ function FAQSection() {
           <span className="inline-flex items-center justify-center rounded-full border border-black/10 bg-white/60 px-3 py-1 text-xs font-medium text-neutral-700 backdrop-blur">
             FAQ
           </span>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight font-serif text-neutral-900sm:text-4xl">
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight font-serif text-neutral-900 sm:text-4xl">
             Questions & answers
           </h2>
           <p className="mt-2 text-sm text-neutral-600">

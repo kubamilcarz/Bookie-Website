@@ -8,7 +8,7 @@ const nav = [
   { href: '/features', label: 'Features' },
 //   { href: '/pricing', label: 'Pricing' },
   { href: '/blog', label: 'Blog' },
-  { href: '/support', label: 'Support' },
+//   { href: '/support', label: 'Support' },
   { href: '/about', label: 'About' },
 ]
 
@@ -35,7 +35,7 @@ export function SiteHeader() {
         {/* Nav links */}
         <div className="flex items-center gap-3 text-sm">
           {nav.map((item) => {
-            const active = pathname === item.href
+            const active = pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href))
             return (
             <Link
                 key={item.href}

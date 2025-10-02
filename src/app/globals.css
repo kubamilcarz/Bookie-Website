@@ -48,3 +48,12 @@ body {
   .animate-fade-in,
   .animate-fade-in-up { animation: none !important; opacity: 1 !important; transform: none !important; }
 }
+
+.prose :where(p):not(:where([class~="not-prose"] *)) {
+  text-wrap: pretty;
+  hyphens: auto;
+  letter-spacing: 0.003em;      /* tiny tracking for sans */
+}
+
+/* Headings balance on 2+ lines */
+.prose :where(h1, h2, h3) { text-wrap: balance; }
