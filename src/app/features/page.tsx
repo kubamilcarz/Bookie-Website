@@ -16,13 +16,13 @@ const regular: Feature[] = [
   {
     title: "Fast Book Logging",
     desc: "Add books by search or barcode — clean, uncluttered flow built for speed.",
-    image: "/features/logging.png",
+    image: "/features/fast-logging.png",
     bullets: ["Barcode scanner", "ISBN search"],
   },
   {
     title: "Reading Progress",
     desc: "Update pages in seconds and watch your progress grow with gentle nudges.",
-    image: "/features/progress.png",
+    image: "/features/reading-progress.png",
     bullets: ["Quick updates", "Daily reminders (optional)"],
   },
   {
@@ -60,37 +60,35 @@ const bookiePlus: Feature[] = [
   {
     title: "Monthly Summary",
     desc: "Gentle monthly recap of your reading habits and highlights.",
-    image: "/features/monthly-summary.png",
+    image: "/features/summary.png",
   },
   {
     title: "Quote Scanner",
     desc: "Import quotes from images to Bookie.",
-    image: "/features/quote-export.png",
+    image: "/features/scanner.png",
   },
   {
     title: "Better Organization",
     desc: "Sorting, filtering, and custom shelves to keep your library tidy.",
-    image: "/features/library.png",
+    image: "/features/organization.png",
   },
   {
-    title: "Dynamic Lists 2.0",
+    title: "Dynamic Lists",
     desc: "Build powerful saved views (e.g., 5★ this year, short books, TBR next).",
     image: "/features/dynamic-lists.png",
     bullets: ["Stackable filters", "Save & pin lists"],
-    soon: true,
   },
   {
     title: "Themes",
     desc: "A beautiful set of themes — match your vibe while you read.",
     image: "/features/themes.png",
-    soon: true,
   },
 ];
 
 function FeatureCard({ f }: { f: Feature }) {
   return (
     <div className="group overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm transition hover:shadow-md">
-      <div className="relative aspect-[16/10] w-full overflow-hidden">
+      <div className="relative aspect-[5/4] w-full overflow-hidden">
         <Image
           src={f.image}
           alt=""

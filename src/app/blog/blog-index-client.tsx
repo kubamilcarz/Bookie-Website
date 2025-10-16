@@ -73,7 +73,7 @@ export default function BlogIndexClient({ posts }: { posts: Post[] }) {
             href={`/blog/${post.slug}`}
             className="group overflow-hidden rounded-2xl bg-white shadow-sm transition hover:shadow-md"
           >
-            <div className="relative aspect-[16/9] w-full overflow-hidden">
+            <div className="relative aspect-[3/2] w-full overflow-hidden">
               {post.cover ? (
                 <Image
                   src={post.cover}

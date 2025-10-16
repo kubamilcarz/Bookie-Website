@@ -27,14 +27,14 @@ const buckets: Bucket[] = [
       {
         title: "Immersive Themes",
         desc: "Custom color themes that inspire you and feel truly yours.",
-        status: "in-progress",
+        status: "shipped",
         eta: "Q3 2025",
         tag: "Bookie+",
       },
       {
         title: "Liquid Glass",
         desc: "iOS 26+ exclusive redesign with fluid animations and tactile interactions.",
-        status: "in-progress",
+        status: "shipped",
         eta: "Q4 2025",
       },
       {

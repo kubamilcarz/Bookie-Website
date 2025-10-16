@@ -112,17 +112,17 @@ function Hero() {
             transition={{ duration: 0.5 }}
             className="order-1 lg:order-none lg:col-span-6"
           >
-            <div className="relative mx-auto max-w-[520px] overflow-hidden">
+            <div className="relative mx-auto max-w-[600px] overflow-hidden">
               <div className="relative aspect-[16/10] w-full">
                 <Image
-                  src="/showcase.png"
+                  src="/transparent-showcase.png"
                   alt="Bookie app showcase"
                   fill
                   sizes="(min-width: 1024px) 44vw, 90vw"
                   priority
                   placeholder="blur"
                   blurDataURL="/showcase-small.png"
-                  className="object-fit"
+                  className="object-contain"
                 />
               </div>
             </div>
@@ -528,7 +528,7 @@ function BookiePlusSection() {
             <div className="relative overflow-hidden rounded-2xl">
               <div className="relative aspect-[5/7] w-full overflow-hidden rounded-xl">
                 <Image
-                  src="/themes-stack.png"
+                  src="/bookie-plus-stacked.png"
                   alt="Bookie+ showcase"
                   fill
                   className="object-contain"
