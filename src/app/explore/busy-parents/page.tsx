@@ -175,7 +175,7 @@ export default function BusyParentsPage() {
             title: "Parent-Friendly Stats",
             description: "See how those scattered reading moments add up over time. You're reading more than you think, and we'll prove it!",
             image: "/features/stats.png",
-            features: ["Weekly/monthly summaries", "Reading streak flexibility", "Time investment tracking", "Progress celebrations"],
+            features: ["Monthly summaries", "Reading streak flexibility", "Time investment tracking", "Progress celebrations"],
             icon: (
               <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor">
                 <path d="M4 19h16v2H4zM6 5h2v12H6zm5 6h2v6h-2zm5-4h2v10h-2z"/>

@@ -204,7 +204,7 @@ export default function ReadingHabitsPage() {
             title: "Smart Habit Insights",
             description: "Understand your reading patterns with gentle analytics. See when you read most, what motivates you, and how to optimize your habit.",
             image: "/features/stats.png",
-            features: ["Reading pattern analysis", "Motivation tracking", "Habit strength score", "Personalized insights"],
+            features: ["Motivation tracking", "Habit strength score", "Personalized insights"],
             icon: (
               <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor">
                 <path d="M12 2a10 10 0 1010 10A10.011 10.011 0 0012 2zm1 5h-2v5l4.243 2.536 1-1.732L13 11.268z"/>

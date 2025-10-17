@@ -177,7 +177,7 @@ export default function GoodreadsAlternativePage() {
             title: "Smart Quote Scanning",
             description: "Something Goodreads will never have - capture quotes directly from physical books using your camera. No typing, no transcription errors.",
             image: "/features/scanner.png",
-            features: ["Camera text recognition", "Instant quote capture", "Book auto-linking", "Export & share quotes"],
+            features: ["Camera text recognition", "Instant quote capture", "Export & share quotes"],
             icon: (
               <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor">
                 <path d="M4 7a3 3 0 013-3h2v2H7a1 1 0 00-1 1v2H4V7zm16 10a3 3 0 01-3 3h-2v-2h2a1 1 0 001-1v-2h2v2z"/>
