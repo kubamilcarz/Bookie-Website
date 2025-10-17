@@ -40,6 +40,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${notoSans.variable} ${notoSerif.variable}`}>
+    <head>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-8M4574LJFH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-8M4574LJFH');
+      </script>
+    </head>
       <body className="font-sans bg-white text-gray-900 antialiased">
         <SiteHeader />
         {children}
