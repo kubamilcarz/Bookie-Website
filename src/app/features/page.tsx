@@ -6,10 +6,10 @@ import { Container, Section } from "@/components/layout/container";
 type Feature = {
   title: string;
   desc: string;
-  image: string; // public path e.g. /features/quotes.png
+  image: string;
   bullets?: string[];
   tag?: "New" | "Improved";
-  soon?: boolean; // true if feature is not yet implemented
+  soon?: boolean;
 };
 
 const regular: Feature[] = [
@@ -169,7 +169,6 @@ export default function FeaturesPage() {
             </div>
           </div>
 
-          {/* Regular features */}
           <section className="mx-auto mt-10 max-w-5xl">
             <div className="mb-4">
               <h2 className="text-2xl font-semibold tracking-tight text-neutral-900">
@@ -186,7 +185,6 @@ export default function FeaturesPage() {
             </div>
           </section>
 
-          {/* Bookie+ */}
           <section id="bookie-plus" className="mx-auto mt-12 max-w-5xl">
             <div className="mb-4">
               <h2 className="text-2xl font-semibold tracking-tight text-neutral-900">
