@@ -125,9 +125,20 @@ function Badge({
 }
 
 export const metadata = {
-  title: "Roadmap · Bookie",
+  title: "Roadmap - Upcoming Features & Product Updates | Bookie",
   description:
-    "Where Bookie is headed — upcoming features, ideas, and what’s on the horizon.",
+    "See what's next for Bookie: upcoming features, improvements in development, and ideas we're exploring. Share feedback and vote on features you'd like to see.",
+  openGraph: {
+    title: "Bookie Roadmap - What's Coming Next",
+    description: "Upcoming features, improvements in progress, and ideas we're exploring for Bookie.",
+    url: "https://getbookie.app/roadmap",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Bookie Roadmap - What's Coming Next",
+    description: "Upcoming features, improvements in progress, and ideas we're exploring.",
+  },
 };
 
 export default function RoadmapPage() {

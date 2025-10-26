@@ -6,9 +6,28 @@ export const dynamic = "force-static";
 export const revalidate = false; 
 
 export const metadata = {
-  title: "Bookie Blog",
+  title: "Blog - Reading Tips, Product Updates & Book Tracker Guides | Bookie",
   description:
-    "Product updates, tips, and reading rituals from the Bookie team.",
+    "Product updates, reading tips, book tracking guides, and insights from the Bookie team. Learn how to build better reading habits and get more from your books.",
+  keywords: [
+    "reading tips",
+    "book tracker guide",
+    "reading habits",
+    "product updates",
+    "book tracking blog",
+    "reading motivation"
+  ],
+  openGraph: {
+    title: "Bookie Blog - Reading Tips & Product Updates",
+    description: "Product updates, reading tips, and guides to help you build better reading habits.",
+    url: "https://getbookie.app/blog",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Bookie Blog - Reading Tips & Product Updates",
+    description: "Product updates, reading tips, and guides to help you build better reading habits.",
+  },
 };
 
 export default function BlogIndexPage() {

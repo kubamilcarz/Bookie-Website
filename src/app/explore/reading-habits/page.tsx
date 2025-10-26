@@ -9,7 +9,33 @@ import {
 
 export const metadata = {
   title: "Build a Reading Habit That Actually Sticks | Bookie",
-  description: "Stop abandoning books halfway through. Bookie's gentle approach helps you build consistent reading habits without pressure or guilt.",
+  description: "Stop abandoning books halfway through. Bookie's gentle approach helps you build consistent reading habits without pressure or guilt. Flexible goals, streak tracking, and motivating stats.",
+  keywords: [
+    "build reading habit",
+    "reading habits tracker",
+    "consistent reading",
+    "reading streak",
+    "reading motivation",
+    "finish more books",
+    "reading goals app"
+  ],
+  openGraph: {
+    title: "Build a Reading Habit That Actually Sticks",
+    description: "Gentle tracking approach that helps you build consistent reading habits without pressure.",
+    url: "https://getbookie.app/explore/reading-habits",
+    type: "website",
+    images: [
+      {
+        url: "https://getbookie.app/transparent-showcase.png",
+        alt: "Build reading habits with Bookie",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Build a Reading Habit That Actually Sticks",
+    description: "Gentle tracking that helps you build consistent reading habits without pressure.",
+  },
 };
 
 const habitBenefits = [

@@ -9,7 +9,33 @@ import {
 
 export const metadata = {
   title: "Better Than Goodreads - Privacy-First Reading Tracker | Bookie",
-  description: "Switch from Goodreads to Bookie - a privacy-focused reading tracker with better features, no ads, and seamless import from your Goodreads library.",
+  description: "Switch from Goodreads to Bookie - a privacy-focused reading tracker with better features, no ads, and seamless import from your Goodreads library. Your data stays private in iCloud.",
+  keywords: [
+    "goodreads alternative",
+    "better than goodreads",
+    "privacy reading tracker",
+    "goodreads import",
+    "private book tracker",
+    "no ads reading app",
+    "goodreads replacement"
+  ],
+  openGraph: {
+    title: "Better Than Goodreads - Privacy-First Book Tracker",
+    description: "Privacy-focused reading tracker with no ads, better features, and seamless Goodreads import.",
+    url: "https://getbookie.app/explore/goodreads-alternative",
+    type: "website",
+    images: [
+      {
+        url: "https://getbookie.app/transparent-showcase.png",
+        alt: "Bookie - Goodreads alternative",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Better Than Goodreads - Privacy-First Book Tracker",
+    description: "Privacy-focused with no ads, better features, and seamless Goodreads import.",
+  },
 };
 
 const goodreadsBenefits = [

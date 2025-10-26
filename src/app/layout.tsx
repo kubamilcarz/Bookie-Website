@@ -3,12 +3,35 @@ import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { Noto_Sans, Noto_Serif } from "next/font/google";
 import { Footer } from "@/components/layout/footer";
+import { OrganizationSchema, WebsiteSchema } from "@/components/schema";
 
 export const metadata: Metadata = {
-  title: "Bookie – Reading tracker",
+  metadataBase: new URL("https://getbookie.app"),
+  title: {
+    default: "Bookie - Book Tracking App for iOS | Track Your Reading",
+    template: "%s | Bookie"
+  },
   description:
-    "Track what you read. Stay motivated. Bookie+ for power features.",
-  metadataBase: new URL("https://bookie.app"),
+    "Track your reading, set goals, and build lasting reading habits. Bookie is a beautiful book tracker for iOS with barcode scanning, quote capture, and statistics.",
+  keywords: [
+    "book tracker",
+    "reading tracker",
+    "book tracking app",
+    "iOS book app",
+    "reading goals",
+    "book journal",
+    "reading habits",
+    "book scanner",
+    "quote scanner"
+  ],
+  authors: [{ name: "Bookie" }],
+  creator: "Bookie",
+  publisher: "Bookie",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -16,6 +39,44 @@ export const metadata: Metadata = {
     ],
     apple: "/bookie-logo-icon.png",
     shortcut: "/favicon.ico",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://getbookie.app",
+    siteName: "Bookie",
+    title: "Bookie - Book Tracking App for iOS",
+    description: "Track your reading, set goals, and build lasting reading habits.",
+    images: [
+      {
+        url: "/transparent-showcase.png",
+        width: 1200,
+        height: 630,
+        alt: "Bookie app showcase",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bookie - Book Tracking App for iOS",
+    description: "Track your reading, set goals, and build lasting reading habits.",
+    images: ["/transparent-showcase.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    // Add when you get them:
+    // google: 'your-google-verification-code',
+    // yandex: 'your-yandex-verification-code',
   },
 };
 
@@ -52,6 +113,8 @@ export default function RootLayout({
           `,
         }}
       />
+      <OrganizationSchema />
+      <WebsiteSchema />
     </head>
       <body className="font-sans bg-white text-gray-900 antialiased">
         <SiteHeader />

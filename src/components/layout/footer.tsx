@@ -3,11 +3,16 @@ import Image from "next/image";
 
 const nav = {
   Product: [
-    // { label: "Pricing", href: "/premium" },
-    // { label: "Support", href: "/support" },
     { label: "Features", href: "/features" },
     { label: "Roadmap", href: "/roadmap" },
+    { label: "Support", href: "/support" },
     { label: "Release Notes", href: "/blog?tag=release" },
+  ],
+  Explore: [
+    { label: "For Book Lovers", href: "/explore/book-lovers" },
+    { label: "Reading Habits", href: "/explore/reading-habits" },
+    { label: "Goodreads Alternative", href: "/explore/goodreads-alternative" },
+    { label: "For Busy Parents", href: "/explore/busy-parents" },
   ],
   Company: [
     { label: "About", href: "/about" },
@@ -29,9 +34,9 @@ export function Footer() {
   return (
     <footer className="bg-[var(--bookie-bg)] text-white select-none">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 pt-32 pb-14">
-            <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-7">
+            <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-8">
                 {/* Logo / brand */}
-                <div className="sm:col-span-3">
+                <div className="sm:col-span-2 lg:col-span-2">
                     <Link href="/" className="flex items-center gap-2 text-lg font-semibold font-serif">
                         <Image 
                             src="/bookie-logo-icon.png" 
@@ -41,6 +46,9 @@ export function Footer() {
                         />
                         <span>Bookie</span>
                     </Link>
+                    <p className="mt-4 text-xs text-white/60 max-w-xs">
+                      Track your reading, set goals, and build lasting reading habits with the beautiful book tracker for iOS.
+                    </p>
                 </div>
 
                 {Object.entries(nav).map(([group, links]) => (

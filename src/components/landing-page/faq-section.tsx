@@ -1,6 +1,7 @@
 "use client";
 
 import { Container, Section } from "@/components/layout/container";
+import { FAQSchema } from "@/components/schema";
 
 function ChevronIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -69,62 +70,71 @@ export function FAQSection({
   supportLinkHref = "/support",
   className = ""
 }: FAQSectionProps) {
+  // Convert FAQs to schema format
+  const faqSchemaItems = faqs.map(faq => ({
+    question: faq.q,
+    answer: faq.a
+  }));
+
   return (
-    <Section className={className}>
-      <Container>
-        <div className="mx-auto max-w-2xl text-center">
-          <span className="inline-flex items-center justify-center rounded-full border border-black/10 bg-white/60 px-3 py-1 text-xs font-medium text-neutral-700 backdrop-blur">
-            {badge}
-          </span>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight font-serif text-neutral-900 sm:text-4xl">
-            {title}
-          </h2>
-          <p className="mt-2 text-sm text-neutral-600">
-            {subtitle.includes("Support") ? (
-              <>
-                For billing, troubleshooting, or feature requests, please see our{" "}
-                <a
-                  href={supportLinkHref}
-                  className="underline decoration-[color:var(--bookie-orange)]/40 underline-offset-2 hover:decoration-[color:var(--bookie-orange)]"
-                >
-                  {supportLinkText}
-                </a>{" "}
-                page.
-              </>
-            ) : (
-              subtitle
-            )}
-          </p>
-        </div>
+    <>
+      <FAQSchema items={faqSchemaItems} />
+      <Section className={className}>
+        <Container>
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="inline-flex items-center justify-center rounded-full border border-black/10 bg-white/60 px-3 py-1 text-xs font-medium text-neutral-700 backdrop-blur">
+              {badge}
+            </span>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight font-serif text-neutral-900 sm:text-4xl">
+              {title}
+            </h2>
+            <p className="mt-2 text-sm text-neutral-600">
+              {subtitle.includes("Support") ? (
+                <>
+                  For billing, troubleshooting, or feature requests, please see our{" "}
+                  <a
+                    href={supportLinkHref}
+                    className="underline decoration-[color:var(--bookie-orange)]/40 underline-offset-2 hover:decoration-[color:var(--bookie-orange)]"
+                  >
+                    {supportLinkText}
+                  </a>{" "}
+                  page.
+                </>
+              ) : (
+                subtitle
+              )}
+            </p>
+          </div>
 
-        <div className="mx-auto mt-8 max-w-2xl divide-y divide-black/10 rounded-2xl border border-black/10 bg-white/70 backdrop-blur">
-          {faqs.map((item, idx) => (
-            <details
-              key={idx}
-              className="group open:bg-white/80"
+          <div className="mx-auto mt-8 max-w-2xl divide-y divide-black/10 rounded-2xl border border-black/10 bg-white/70 backdrop-blur">
+            {faqs.map((item, idx) => (
+              <details
+                key={idx}
+                className="group open:bg-white/80"
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-left text-sm font-medium text-neutral-900 outline-none transition hover:bg-black/5">
+                  <span>{item.q}</span>
+                  <ChevronIcon className="h-5 w-5 shrink-0 text-neutral-500 transition group-open:rotate-180" />
+                </summary>
+                <div className="px-5 py-2 text-sm text-neutral-700">
+                  {item.a}
+                </div>
+              </details>
+            ))}
+          </div>
+
+          <div className="mx-auto mt-6 max-w-2xl text-center text-sm text-neutral-600">
+            Still need help? Head to our{" "}
+            <a
+              href={supportLinkHref}
+              className="underline decoration-[color:var(--bookie-orange)]/40 underline-offset-2 hover:decoration-[color:var(--bookie-orange)]"
             >
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-left text-sm font-medium text-neutral-900 outline-none transition hover:bg-black/5">
-                <span>{item.q}</span>
-                <ChevronIcon className="h-5 w-5 shrink-0 text-neutral-500 transition group-open:rotate-180" />
-              </summary>
-              <div className="px-5 py-2 text-sm text-neutral-700">
-                {item.a}
-              </div>
-            </details>
-          ))}
-        </div>
-
-        <div className="mx-auto mt-6 max-w-2xl text-center text-sm text-neutral-600">
-          Still need help? Head to our{" "}
-          <a
-            href={supportLinkHref}
-            className="underline decoration-[color:var(--bookie-orange)]/40 underline-offset-2 hover:decoration-[color:var(--bookie-orange)]"
-          >
-            {supportLinkText}
-          </a>{" "}
-          page.
-        </div>
-      </Container>
-    </Section>
+              {supportLinkText}
+            </a>{" "}
+            page.
+          </div>
+        </Container>
+      </Section>
+    </>
   );
 }

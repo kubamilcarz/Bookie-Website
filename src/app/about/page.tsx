@@ -1,9 +1,27 @@
 import Image from "next/image";
 import { Container } from "@/components/layout/container";
+import { QuickLinks } from "@/components/internal-links";
 
 export const metadata = {
-  title: "About – Bookie",
-  description: "Learn more about the creator of Bookie.",
+  title: "About Bookie - Built by a Reader for Readers",
+  description: "Meet Kuba, the creator of Bookie. Learn the story behind building a simple, beautiful book tracker that helps thousands of readers stay motivated.",
+  openGraph: {
+    title: "About Bookie - Built by a Reader for Readers",
+    description: "Meet the creator of Bookie and learn why this app was built for readers who want simplicity.",
+    url: "https://getbookie.app/about",
+    type: "website",
+    images: [
+      {
+        url: "https://getbookie.app/kuba.png",
+        alt: "Kuba - Creator of Bookie",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "About Bookie - Built by a Reader for Readers",
+    description: "Meet the creator behind the simple, beautiful book tracker.",
+  },
 };
 
 export default function AboutPage() {
@@ -67,6 +85,22 @@ export default function AboutPage() {
             </a>
             .
           </p>
+
+          {/* Internal Linking */}
+          <div className="mt-12 pt-8 border-t border-neutral-200">
+            <h2 className="text-lg font-semibold text-neutral-900 mb-4">
+              Explore Bookie
+            </h2>
+            <QuickLinks
+              links={[
+                { label: "See Features", href: "/features" },
+                { label: "Product Roadmap", href: "/roadmap" },
+                { label: "Read the Blog", href: "/blog" },
+                { label: "Get Support", href: "/support" },
+                { label: "Download App", href: "https://apps.apple.com/us/app/book-tracker-bookie/id6443825869" }
+              ]}
+            />
+          </div>
         </section>
       </Container>
     </main>

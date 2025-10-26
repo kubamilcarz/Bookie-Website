@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container, Section } from "@/components/layout/container";
+import { RelatedPages } from "@/components/internal-links";
 
 type Feature = {
   title: string;
@@ -136,9 +137,36 @@ function FeatureCard({ f }: { f: Feature }) {
 }
 
 export const metadata = {
-  title: "Features · Bookie",
+  title: "Features - Book Tracker with Barcode Scanner & Quote Capture | Bookie",
   description:
-    "A quick tour of Bookie’s key features — and what you get with Bookie+.",
+    "Explore Bookie's features: barcode scanner for quick book entry, OCR quote scanner, reading goals, statistics, custom shelves, iCloud sync, and more. Free with premium Bookie+ upgrade.",
+  keywords: [
+    "book scanner",
+    "barcode scanner books",
+    "quote scanner",
+    "reading tracker features",
+    "book organizer",
+    "reading statistics",
+    "book shelves app",
+    "iCloud book sync"
+  ],
+  openGraph: {
+    title: "Bookie Features - Book Tracker with Scanner & Stats",
+    description: "Barcode scanner, quote capture, reading goals, statistics, custom shelves & more. See what makes Bookie the best book tracking app.",
+    url: "https://getbookie.app/features",
+    type: "website",
+    images: [
+      {
+        url: "https://getbookie.app/features/fast-logging.png",
+        alt: "Bookie features showcase",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bookie Features - Book Tracker with Scanner & Stats",
+    description: "Barcode scanner, quote capture, reading goals, statistics, custom shelves & more.",
+  },
 };
 
 export default function FeaturesPage() {
@@ -214,6 +242,43 @@ export default function FeaturesPage() {
               </div>
             </div>
           </section>
+
+          {/* Internal Linking */}
+          <RelatedPages
+            title="Learn More About Bookie"
+            pages={[
+              {
+                title: "For Book Lovers",
+                description: "Join thousands of passionate readers tracking their literary journey.",
+                href: "/explore/book-lovers"
+              },
+              {
+                title: "Build Reading Habits",
+                description: "Gentle tracking that helps you build consistent reading habits.",
+                href: "/explore/reading-habits"
+              },
+              {
+                title: "Goodreads Alternative",
+                description: "Privacy-first reading tracker with no ads and better features.",
+                href: "/explore/goodreads-alternative"
+              },
+              {
+                title: "Read the the Blog",
+                description: "Tips, updates, and insights from the Bookie team.",
+                href: "/blog"
+              },
+              {
+                title: "Product Roadmap",
+                description: "See what's coming next and share your feedback.",
+                href: "/roadmap"
+              },
+              {
+                title: "Download Bookie",
+                description: "Get started with Bookie on your iPhone or iPad.",
+                href: "https://apps.apple.com/us/app/book-tracker-bookie/id6443825869"
+              }
+            ]}
+          />
         </Container>
       </Section>
     </main>

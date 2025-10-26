@@ -10,7 +10,33 @@ import {
 
 export const metadata = {
   title: "Replace Screen Time with Reading Time | Digital Detox with Bookie",
-  description: "Turn mindless scrolling into mindful reading. Track your analog reading journey and rediscover the joy of physical books.",
+  description: "Turn mindless scrolling into mindful reading. Track your analog reading journey, reduce screen time, and rediscover the joy of physical books with Bookie's distraction-free tracker.",
+  keywords: [
+    "digital detox reading",
+    "reduce screen time",
+    "analog reading tracker",
+    "mindful reading",
+    "replace scrolling with reading",
+    "physical books tracker",
+    "screen time alternative"
+  ],
+  openGraph: {
+    title: "Replace Screen Time with Reading Time",
+    description: "Turn mindless scrolling into mindful reading with Bookie's distraction-free tracker.",
+    url: "https://getbookie.app/explore/digital-detox",
+    type: "website",
+    images: [
+      {
+        url: "https://getbookie.app/transparent-showcase.png",
+        alt: "Digital detox with Bookie",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Replace Screen Time with Reading Time",
+    description: "Turn mindless scrolling into mindful reading.",
+  },
 };
 
 const digitalDetoxProblems = [

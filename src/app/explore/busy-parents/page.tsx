@@ -9,7 +9,33 @@ import {
 
 export const metadata = {
   title: "Reading Tracker for Busy Parents | Bookie",
-  description: "Rediscover reading between school runs and bedtime stories. Quick logging and flexible goals designed for parents who steal reading moments.",
+  description: "Rediscover reading between school runs and bedtime stories. Quick logging and flexible goals designed for parents who steal reading moments. Track progress in seconds.",
+  keywords: [
+    "reading app for parents",
+    "busy parent reading tracker",
+    "quick book logging",
+    "reading for moms",
+    "reading for dads",
+    "parent reading goals",
+    "reading between kids"
+  ],
+  openGraph: {
+    title: "Reading Tracker for Busy Parents",
+    description: "Quick logging and flexible goals for parents who steal reading moments.",
+    url: "https://getbookie.app/explore/busy-parents",
+    type: "website",
+    images: [
+      {
+        url: "https://getbookie.app/transparent-showcase.png",
+        alt: "Bookie for busy parents",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Reading Tracker for Busy Parents",
+    description: "Quick logging and flexible goals for parents who steal reading moments.",
+  },
 };
 
 const parentBenefits = [

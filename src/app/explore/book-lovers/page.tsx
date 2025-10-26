@@ -9,7 +9,33 @@ import {
 
 export const metadata = {
   title: "The Perfect Reading Tracker for Book Lovers | Bookie",
-  description: "Join thousands of passionate readers who use Bookie to track their reading journey, discover new books, and build lasting reading habits.",
+  description: "Join thousands of passionate readers who use Bookie to track their reading journey, discover new books, and build lasting reading habits. Track quotes, set goals, and celebrate your literary journey.",
+  keywords: [
+    "book lovers app",
+    "reading tracker for avid readers",
+    "book journal",
+    "literary journal",
+    "reading community",
+    "book collector app",
+    "reading goals for book lovers"
+  ],
+  openGraph: {
+    title: "The Perfect Reading Tracker for Book Lovers",
+    description: "Join thousands of passionate readers tracking their literary journey with Bookie.",
+    url: "https://getbookie.app/explore/book-lovers",
+    type: "website",
+    images: [
+      {
+        url: "https://getbookie.app/transparent-showcase.png",
+        alt: "Bookie for book lovers",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Perfect Reading Tracker for Book Lovers",
+    description: "Join thousands of passionate readers tracking their literary journey.",
+  },
 };
 
 export default function BookLoversLandingPage() {

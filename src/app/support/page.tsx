@@ -3,8 +3,27 @@ import { Container, Section } from "@/components/layout/container";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Support · Bookie",
-  description: "Help and support for Bookie.",
+  title: "Support & Help Center - Get Started with Bookie",
+  description: "Find help articles, FAQs, troubleshooting guides, and contact support for Bookie. Learn how to get started, import books, use features, and more.",
+  keywords: [
+    "bookie support",
+    "book tracker help",
+    "how to use bookie",
+    "bookie guide",
+    "contact support",
+    "troubleshooting"
+  ],
+  openGraph: {
+    title: "Bookie Support & Help Center",
+    description: "Find help articles, guides, and contact support for Bookie.",
+    url: "https://getbookie.app/support",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Bookie Support & Help Center",
+    description: "Find help articles, guides, and contact support.",
+  },
 };
 
 export default function SupportPage() {
