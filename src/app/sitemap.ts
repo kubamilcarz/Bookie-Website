@@ -18,6 +18,9 @@ export default function sitemap() {
 
   // Explore pages (SEO landing pages)
   const explorePages = [
+    { url: `${base}/explore/reading-tracker/`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${base}/explore/book-scanner/`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${base}/explore/reading-goals/`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
     { url: `${base}/explore/book-lovers/`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
     { url: `${base}/explore/busy-parents/`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
     { url: `${base}/explore/digital-detox/`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },

@@ -9,6 +9,9 @@ const nav = {
     { label: "Release Notes", href: "/blog?tag=release" },
   ],
   Explore: [
+    { label: "Reading Tracker", href: "/explore/reading-tracker" },
+    { label: "Book Scanner", href: "/explore/book-scanner" },
+    { label: "Reading Goals", href: "/explore/reading-goals" },
     { label: "For Book Lovers", href: "/explore/book-lovers" },
     { label: "Reading Habits", href: "/explore/reading-habits" },
     { label: "Goodreads Alternative", href: "/explore/goodreads-alternative" },
