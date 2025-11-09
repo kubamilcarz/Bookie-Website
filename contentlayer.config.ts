@@ -40,8 +40,8 @@ export const BlogPost = defineDocumentType(() => ({
 
 export const SupportArticle = defineDocumentType(() => ({
   name: "SupportArticle",
-  filePathPattern: "support/**/*.md",
-  contentType: "markdown",
+  filePathPattern: "support/**/*.mdx",
+  contentType: "mdx",
   fields: {
     title: {
       type: "string",
@@ -61,15 +61,47 @@ export const SupportArticle = defineDocumentType(() => ({
         "troubleshooting",
         "billing",
         "bookie-plus",
+        "account",
+        "community",
       ],
-      description: "Article category",
+      description: "Primary help-center category",
       required: true,
+    },
+    platform: {
+      type: "enum",
+      options: ["ios", "ipad", "mac", "web", "multi"],
+      description: "Platform focus for filtering",
+      required: true,
+      default: "multi",
+    },
+    tags: {
+      type: "list",
+      of: { type: "string" },
+      description: "Feature or topic tags",
+      required: false,
     },
     order: {
       type: "number",
       description: "Order in the list (lower numbers appear first)",
       required: false,
       default: 999,
+    },
+    isFeatured: {
+      type: "boolean",
+      description: "Whether the article should appear in featured lists",
+      required: false,
+      default: false,
+    },
+    difficulty: {
+      type: "enum",
+      options: ["beginner", "intermediate", "advanced"],
+      description: "Difficulty level for the tutorial",
+      required: false,
+    },
+    videoId: {
+      type: "string",
+      description: "Optional YouTube video ID to highlight",
+      required: false,
     },
     lastUpdated: {
       type: "date",
@@ -86,6 +118,15 @@ export const SupportArticle = defineDocumentType(() => ({
       type: "string",
       resolve: (doc) =>
         `/support/${doc._raw.flattenedPath.replace("support/", "")}`,
+    },
+    wordCount: {
+      type: "number",
+      resolve: (doc) => doc.body.raw.split(/\s+/g).length,
+    },
+    readingTime: {
+      type: "number",
+      resolve: (doc) =>
+        Math.max(1, Math.ceil(doc.body.raw.split(/\s+/g).length / 200)),
     },
   },
 }));

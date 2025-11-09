@@ -13,7 +13,11 @@ const config: Config = {
         "bookie-bg": "rgb(var(--bookie-bg) / <alpha-value>)",
         "bookie-orange": "rgb(var(--bookie-orange) / <alpha-value>)",
       },
-      typography({ theme }: { theme: (arg0: string) => any }) {
+      typography({
+        theme,
+      }: {
+        theme: (path: string) => string | number | string[] | undefined;
+      }) {
         return {
           bookie: {
             css: {
